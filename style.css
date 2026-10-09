@@ -1,152 +1,39 @@
-/* LYOPHILLIZERS 11 — original dark-green + neon-lime theme */
-:root {
-  --bg: #06120d;
-  --panel: #11151a;
-  --panel2: #0a1b13;
-  --lime: #b7ff35;
-  --green: #087451;
-  --white: #f6fff9;
-  --muted: #aabbb2;
-  --line: rgba(183,255,53,.19);
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 84px; }
-body { background: var(--bg); color: var(--white); font-family: Inter, Arial, sans-serif; line-height: 1.6; }
-a { color: inherit; text-decoration: none; }
-::selection { background: var(--lime); color: #06120d; }
-.site-header { min-height: 64px; position: sticky; top: 0; z-index: 20; padding: 14px 7%; display: flex; justify-content: space-between; align-items: center; gap: 20px; background: rgba(4,14,9,.96); border-bottom: 1px solid rgba(183,255,53,.12); backdrop-filter: blur(12px); }
-.logo { font: 900 23px "Barlow Condensed", sans-serif; letter-spacing: -.2px; white-space: nowrap; }
-.logo b { color: var(--lime); }
-.logo-ball { font-size: 20px; }
-.site-header nav { display: flex; gap: 25px; }
-.site-header nav a { color: #c5d2ca; font-size: 11px; font-weight: 800; transition: color .2s; }
-.site-header nav a:hover { color: var(--lime); }
-
-.hero { min-height: 660px; padding: 90px 9% 105px; position: relative; isolation: isolate; overflow: hidden; display: grid; grid-template-columns: minmax(0,1.4fr) minmax(240px,.6fr); gap: 35px; align-items: center; background: radial-gradient(ellipse at 83% 45%, rgba(0,112,69,.28), transparent 38%), linear-gradient(110deg,#06120d,#03100b 65%,#071a11); }
-.hero-glow { position: absolute; z-index: -1; width: 450px; height: 450px; right: 4%; top: 8%; border-radius: 50%; background: rgba(0,180,105,.08); filter: blur(35px); }
-.hero-copy { max-width: 800px; }
-.eyebrow { margin-bottom: 15px; color: var(--lime); font-size: 10px; font-weight: 900; letter-spacing: 3px; }
-.hero h1 { max-width: 850px; font: 900 clamp(54px,8.5vw,112px)/.84 "Barlow Condensed", sans-serif; letter-spacing: -1.5px; overflow-wrap: anywhere; }
-.hero h1 span { display: block; color: var(--lime); font-size: 1.18em; }
-.hero h2 { margin-top: 25px; font: 800 clamp(24px,3vw,36px)/1.08 "Barlow Condensed", sans-serif; }
-.hero h2 em { color: var(--lime); font-style: normal; }
-.intro { max-width: 560px; margin-top: 19px; color: #bdcdc4; font-size: 13px; }
-.primary-button { display: inline-flex; gap: 14px; align-items: center; margin-top: 28px; padding: 13px 20px; border-radius: 40px; background: var(--lime); color: #07120b; font-size: 10px; font-weight: 900; transition: transform .2s, box-shadow .2s; }
-.primary-button:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(183,255,53,.2); }
-.hero-stats { display: flex; gap: 30px; max-width: 520px; margin-top: 45px; padding-top: 19px; border-top: 1px solid var(--line); }
-.hero-stats div { display: flex; flex-direction: column; }
-.hero-stats strong { font: 900 31px/1 "Barlow Condensed", sans-serif; color: var(--lime); }
-.hero-stats span { margin-top: 7px; color: #a5b6ac; font-size: 8px; font-weight: 800; letter-spacing: 1px; }
-.hero-emblem { display: grid; place-items: center; }
-.emblem-ring { width: clamp(150px,18vw,220px); aspect-ratio: 1; border: 2px solid var(--lime); border-radius: 50%; background: rgba(0,114,78,.68); box-shadow: 0 0 50px rgba(0,180,105,.12), inset 0 0 0 9px rgba(183,255,53,.05); display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotate(-7deg); }
-.emblem-ring strong { font: 900 64px/.95 "Barlow Condensed", sans-serif; }
-.emblem-ring span { font-size: 8px; font-weight: 900; letter-spacing: 2px; }
-.hero-strip { position: absolute; bottom: 0; left: 0; width: 100%; padding: 13px 9%; display: flex; justify-content: space-between; background: var(--lime); color: #07120b; font-size: 9px; font-weight: 900; letter-spacing: 1.3px; }
-
-.section-wrap { padding: 82px 6.5%; }
-.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 34px; }
-.section-heading h2, .fixtures h2 { font: 900 clamp(38px,5.5vw,60px)/.95 "Barlow Condensed", sans-serif; }
-.section-heading h2 span, .fixtures h2 span { color: var(--lime); }
-.section-intro { max-width: 560px; margin-top: 13px; color: var(--muted); font-size: 12px; }
-.squad-total { display: flex; flex-direction: column; align-items: center; border-left: 2px solid var(--lime); padding-left: 18px; }
-.squad-total strong { font: 900 48px/.95 "Barlow Condensed", sans-serif; }
-.squad-total span { margin-top: 6px; color: var(--muted); font-size: 8px; font-weight: 800; letter-spacing: 1px; }
-
-.player-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 19px; align-items: stretch; }
-.player-card { min-width: 0; overflow: hidden; background: var(--panel); border: 1px solid rgba(255,255,255,.09); transition: transform .25s,border-color .25s,box-shadow .25s; }
-.player-card:hover { transform: translateY(-5px); border-color: var(--lime); box-shadow: 0 12px 30px rgba(0,0,0,.22); }
-.player-art { min-height: 175px; position: relative; display: grid; place-items: center; overflow: hidden; border-bottom: 2px solid var(--lime); background: radial-gradient(circle at 50% 42%,rgba(183,255,53,.13),transparent 45%), linear-gradient(135deg,#17271d,#101319 65%); }
-.player-art::after { content:""; position:absolute; inset:0; background: linear-gradient(0deg,rgba(0,0,0,.2),transparent 70%); pointer-events:none; }
-.player-no { position: absolute; top: 8px; left: 11px; color: var(--lime); font: 900 27px "Barlow Condensed",sans-serif; }
-.player-emoji { font-size: 53px; filter: drop-shadow(0 5px 9px rgba(0,0,0,.4)); transition: transform .25s; }
-.player-card:hover .player-emoji { transform: scale(1.12) rotate(-4deg); }
-.role-tag { position: absolute; z-index: 2; left: 0; bottom: 12px; padding: 6px 9px; background: var(--lime); color: #07120b; font-size: 8px; font-weight: 900; letter-spacing: .8px; }
-.player-info { padding: 16px 14px 19px; }
-.player-kicker { margin-bottom: 7px; color: var(--lime); font-size: 8px; font-weight: 900; letter-spacing: 1.2px; }
-.player-info h3 { font: 800 clamp(18px,1.7vw,24px)/1.1 "Barlow Condensed",sans-serif; overflow-wrap: anywhere; }
-.player-title { margin-top: 10px; color: #ffca58; font-size: 9px; font-weight: 900; line-height: 1.5; }
-.player-info small { display: block; margin-top: 7px; color: #aab8b0; font-size: 9px; line-height: 1.6; }
-.captain { border-color: rgba(183,255,53,.4); }
-.player-featured { border-color: var(--lime); }
-.featured-poster { height: 310px; position: relative; overflow: hidden; background: #0d1118; border-bottom: 2px solid var(--lime); }
-.featured-poster img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
-.player-featured .player-info { background: linear-gradient(135deg,#13191a,#101319); }
-
-/* Keep the same green-black background identity throughout */
-.battle-banner { position: relative; overflow: hidden; padding: 76px 7%; background: radial-gradient(ellipse at 82% 45%,rgba(0,128,78,.28),transparent 45%), linear-gradient(110deg,#07150e,#0a1a12); border-block: 1px solid var(--line); }
-.battle-banner h2 { font: 900 clamp(48px,7.5vw,82px)/.92 "Barlow Condensed",sans-serif; }
-.battle-banner h2 span { color: var(--lime); }
-.battle-banner > p:last-child { margin-top: 18px; color: #bdcdc4; font-size: 11px; letter-spacing: 1.5px; }
-.fixtures h2 { margin-bottom: 25px; }
-.match-card { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; padding: 28px; background: var(--panel); border: 1px solid rgba(255,255,255,.1); text-align: center; }
-.match-card strong { font: 800 clamp(18px,2.5vw,25px) "Barlow Condensed",sans-serif; }
-.versus { color: var(--lime); font: 900 38px "Barlow Condensed",sans-serif; }
-.match-card p { grid-column: 1/-1; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.1); color: var(--muted); font-size: 9px; font-weight: 800; letter-spacing: 1px; }
-.site-footer { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 32px 6%; text-align: center; background: #040b07; border-top: 1px solid var(--line); }
-.site-footer p { font-size: 9px; font-weight: 900; letter-spacing: 1.5px; }
-.site-footer small { color: #839188; font-size: 9px; }
-
-@media (max-width: 1050px) { .player-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
-@media (max-width: 720px) {
-  .site-header { padding: 13px 5%; flex-wrap: wrap; gap: 10px; }
-  .logo { font-size: 20px; }
-  .site-header nav { gap: 15px; }
-  .site-header nav a { font-size: 9px; }
-  .hero { grid-template-columns: 1fr; padding: 68px 6% 92px; gap: 36px; }
-  .hero h1 { font-size: clamp(53px,12vw,82px); }
-  .hero-emblem { display: none; }
-  .hero-stats { gap: 20px; margin-top: 34px; }
-  .hero-stats strong { font-size: 27px; }
-  .hero-stats span { font-size: 7px; letter-spacing: .4px; }
-  .hero-strip { padding: 12px 5%; font-size: 8px; letter-spacing: .5px; }
-  .section-wrap { padding: 62px 5%; }
-  .section-heading { align-items: start; }
-  .squad-total { padding-left: 12px; }
-  .squad-total strong { font-size: 38px; }
-  .player-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px; }
-  .player-art { min-height: 140px; }
-  .player-emoji { font-size: 43px; }
-  .player-info { padding: 13px 10px 16px; }
-  .player-info h3 { font-size: 19px; }
-  .player-title { font-size: 8px; }
-  .featured-poster { height: 255px; }
-  .battle-banner { padding: 62px 6%; }
-  .match-card { padding: 20px 10px; gap: 9px; }
-  .match-card strong { font-size: 17px; }
-  .versus { font-size: 30px; }
-}
-@media (max-width: 370px) {
-  .site-header nav { gap: 10px; }
-  .site-header nav a { font-size: 8px; }
-  .player-grid { gap: 8px; }
-  .player-info h3 { font-size: 17px; }
-  .featured-poster { height: 220px; }
-}
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { transition-duration: .01ms !important; } }
-
-
-/* Individual player posters: Sachin Chaturvedi and Rohit Saini */
+```css
+/* Player poster images */
 .player-poster {
-  height: 310px;
   position: relative;
+  width: 100%;
+  height: 310px;
   overflow: hidden;
   background: #07111b;
-  border-bottom: 2px solid var(--lime);
+  border-bottom: 2px solid #f5bd36;
 }
+
 .player-poster img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 16%;
+  object-position: center 15%;
+  transition: transform 0.35s ease;
 }
-.player-featured:hover .player-poster img {
-  transform: scale(1.035);
-  transition: transform .35s ease;
+
+.player-card:hover .player-poster img {
+  transform: scale(1.04);
 }
+
+/* Gold and blue poster accents */
+.player-featured {
+  border-color: rgba(56, 189, 248, 0.65);
+}
+
+.player-featured .player-title {
+  color: #ffc53d;
+}
+
 @media (max-width: 720px) {
-  .player-poster { height: 255px; }
+  .player-poster {
+    height: 255px;
+  }
 }
-@media (max-width: 370px) {
-  .player-poster { height: 220px; }
-}
+```
