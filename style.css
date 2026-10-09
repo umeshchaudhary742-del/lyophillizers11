@@ -123,3 +123,30 @@ a { color: inherit; text-decoration: none; }
   .featured-poster { height: 220px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { transition-duration: .01ms !important; } }
+
+
+/* Individual player posters: Sachin Chaturvedi and Rohit Saini */
+.player-poster {
+  height: 310px;
+  position: relative;
+  overflow: hidden;
+  background: #07111b;
+  border-bottom: 2px solid var(--lime);
+}
+.player-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 16%;
+}
+.player-featured:hover .player-poster img {
+  transform: scale(1.035);
+  transition: transform .35s ease;
+}
+@media (max-width: 720px) {
+  .player-poster { height: 255px; }
+}
+@media (max-width: 370px) {
+  .player-poster { height: 220px; }
+}
