@@ -1,161 +1,196 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lyophillizers 11 | Cricket Team</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lyophillizers 11 | The Dominators</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <div class="logo">🏏 LYOPHILLIZERS <span>11</span></div>
+<header class="header">
+  <a class="logo" href="#home">🏏 LYOPHILLIZERS <span>11</span></a>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#squad">Impact Players</a>
-    <a href="#fixtures">Fixtures</a>
+    <a href="#home">HOME</a>
+    <a href="#squad">SQUAD</a>
+    <a href="#fixtures">FIXTURES</a>
   </nav>
 </header>
 
 <section id="home" class="hero">
-  <div>
-    <p class="eyebrow">THE GAME STARTS NOW</p>
+  <div class="hero-content">
+    <p class="eyebrow">⚡ THE GAME STARTS NOW</p>
     <h1>LYOPHILLIZERS <span>11</span></h1>
-    <h2>One Team. One Dream. One Fight.</h2>
-    <p>Built on passion, powered by teamwork, and ready to leave everything on the field.</p>
-    <a class="button" href="#squad">MEET THE IMPACT PLAYERS</a>
+    <h2>FEAR NONE. <span>CONQUER ALL.</span></h2>
+    <p>17 warriors. One team. One mission. Built to compete and ready to dominate.</p>
+    <a class="button" href="#squad">MEET THE SQUAD ↗</a>
   </div>
-  <div class="crest">L11</div>
+  <div class="hero-poster">
+    <img src="umesh-swing-demon.png"
+         alt="Umesh Chaudhary — The Swing Demon, Lyophillizers 11">
+  </div>
 </section>
 
-<section id="squad">
-  <p class="eyebrow">THE SQUAD</p>
-  <h2>Impact Players</h2>
+<section id="squad" class="squad">
+  <p class="eyebrow">01 / THE WARRIORS</p>
+  <h2>MEET THE <span>SQUAD</span></h2>
   <p class="sub">17 Players. Zero Fear. Total Domination.</p>
 
-  <div class="grid">
+  <div class="player-grid">
 
-    <article class="featured">
-      <b>👑 01 • TEAM LEADER</b>
+    <article class="player-card">
+      <div class="player-visual">👑 <b>01</b></div>
       <h3>DR. CHANDER PRAKASH</h3>
-      <p>🧠 The Tactical Beast • The Wall • Captain & Inspirer</p>
+      <p>🧠 THE TACTICAL BEAST</p>
+      <small>Captain • The Wall • Inspirer</small>
     </article>
 
-    <article class="featured">
-      <b>💥 02 • SPECIAL IMPACT</b>
+    <article class="player-card">
+      <div class="player-visual">💥 <b>02</b></div>
       <h3>SACHIN CHATURVEDI</h3>
-      <p>⚡ Chief Selector • The Run Destroyer</p>
+      <p>⚡ THE RUN DESTROYER</p>
+      <small>Chief Selector</small>
     </article>
 
-    <article>
-      <b>🦁 03</b>
+    <article class="player-card">
+      <div class="player-visual">🦁 <b>03</b></div>
       <h3>AZAD BHARTI</h3>
-      <p>👑 The Ruthless King</p>
+      <p>👑 THE RUTHLESS KING</p>
+      <small>The Fearless Warrior</small>
     </article>
 
-    <article>
-      <b>⚡ 04</b>
+    <article class="player-card">
+      <div class="player-visual">⚡ <b>04</b></div>
       <h3>PRAKASH MISHRA</h3>
-      <p>💀 The Game Terminator</p>
+      <p>💀 THE GAME TERMINATOR</p>
+      <small>The Game Changer</small>
     </article>
 
-    <article class="featured">
-      <b>☠️ 05 • SPECIAL IMPACT</b>
-      <h3>UMESH CHAUDHARY</h3>
-      <p>🔥 Both-Hands Swing Fast Bowler</p>
+    <!-- Featured player with your generated poster -->
+    <article class="player-card featured">
+      <div class="poster-card">
+        <img src="umesh-swing-demon.png"
+             alt="Umesh Chaudhary in his aggressive cricket poster"
+             loading="lazy">
+        <span class="poster-label">SPECIAL IMPACT</span>
+      </div>
+      <div class="player-info">
+        <h3>UMESH CHAUDHARY</h3>
+        <p>☠️ THE SWING DEMON</p>
+        <small>⚡ Both-hands swing fast bowler</small>
+      </div>
     </article>
 
-    <article>
-      <b>🛡️ 06</b>
+    <article class="player-card">
+      <div class="player-visual">🛡️ <b>06</b></div>
       <h3>JAGDISH MANJHI</h3>
-      <p>🧱 The Unbreakable Wall</p>
+      <p>🧱 THE UNBREAKABLE WALL</p>
+      <small>Solid under pressure</small>
     </article>
 
-    <article>
-      <b>😈 07</b>
+    <article class="player-card">
+      <div class="player-visual">😈 <b>07</b></div>
       <h3>NITESH SEMWAL</h3>
-      <p>🔥 The Death-Over Demon</p>
+      <p>🔥 THE DEATH-OVER DEMON</p>
+      <small>Ready for clutch moments</small>
     </article>
 
-    <article>
-      <b>🚀 08</b>
+    <article class="player-card">
+      <div class="player-visual">🚀 <b>08</b></div>
       <h3>ROHIT SAINI</h3>
-      <p>💥 The Boundary Beast</p>
+      <p>💥 THE BOUNDARY BEAST</p>
+      <small>Power with purpose</small>
     </article>
 
-    <article>
-      <b>🐺 09</b>
+    <article class="player-card">
+      <div class="player-visual">🐺 <b>09</b></div>
       <h3>SAI ESWAR</h3>
-      <p>⚡ The Wildcard Destroyer</p>
+      <p>⚡ THE WILDCARD DESTROYER</p>
+      <small>Always ready to strike</small>
     </article>
 
-    <article class="featured">
-      <b>🌟 10 • SPECIAL IMPACT</b>
+    <article class="player-card">
+      <div class="player-visual">🌟 <b>10</b></div>
       <h3>MAHIPAL BHARDWAJ</h3>
-      <p>💎 The Rising Star</p>
+      <p>💎 THE RISING STAR</p>
+      <small>The future starts here</small>
     </article>
 
-    <article class="featured">
-      <b>🐅 11 • SPECIAL IMPACT</b>
+    <article class="player-card">
+      <div class="player-visual">🐅 <b>11</b></div>
       <h3>SOHAN JAWARKAR</h3>
-      <p>💎 The X-Factor</p>
+      <p>💎 THE X-FACTOR</p>
+      <small>Made for the big stage</small>
     </article>
 
-    <article>
-      <b>🎯 12</b>
+    <article class="player-card">
+      <div class="player-visual">🎯 <b>12</b></div>
       <h3>SANDEEP MAHARANA</h3>
-      <p>☠️ The Wicket Hunter</p>
+      <p>☠️ THE WICKET HUNTER</p>
+      <small>Every ball is an opportunity</small>
     </article>
 
-    <article>
-      <b>💀 13</b>
+    <article class="player-card">
+      <div class="player-visual">💀 <b>13</b></div>
       <h3>ANUPAM BHOWMIK</h3>
-      <p>👑 The Chase Executioner</p>
+      <p>👑 THE CHASE EXECUTIONER</p>
+      <small>Cool head. Fierce intent.</small>
     </article>
 
-    <article>
-      <b>🧤 14</b>
+    <article class="player-card">
+      <div class="player-visual">🧤 <b>14</b></div>
       <h3>ASWIN</h3>
-      <p>🐆 The Fielding Panther</p>
+      <p>🐆 THE FIELDING PANTHER</p>
+      <small>Sharp reflexes</small>
     </article>
 
-    <article>
-      <b>👊 15</b>
+    <article class="player-card">
+      <div class="player-visual">👊 <b>15</b></div>
       <h3>DEBANJAN</h3>
-      <p>🔥 The Pressure Killer</p>
+      <p>🔥 THE PRESSURE KILLER</p>
+      <small>Never backs down</small>
     </article>
 
-    <article>
-      <b>🌪️ 16</b>
+    <article class="player-card">
+      <div class="player-visual">🌪️ <b>16</b></div>
       <h3>AMRENDRA</h3>
-      <p>💥 The Boundary Reaper</p>
+      <p>💥 THE BOUNDARY REAPER</p>
+      <small>Bring on the challenge</small>
     </article>
 
-    <article>
-      <b>🐉 17</b>
+    <article class="player-card">
+      <div class="player-visual">🐉 <b>17</b></div>
       <h3>PARAM</h3>
-      <p>☠️ The Rising Menace</p>
+      <p>☠️ THE RISING MENACE</p>
+      <small>Hungry to make an impact</small>
     </article>
 
   </div>
 </section>
 
-<section id="fixtures" class="dark">
-  <p class="eyebrow">MATCH CENTRE</p>
-  <h2>Fixtures & Results</h2>
-  <div class="match">
+<section class="battle-banner">
+  <p class="eyebrow">THE LYOPHILLIZERS MINDSET</p>
+  <h2>NO FEAR.<br><span>NO LIMITS.</span><br>ONLY IMPACT.</h2>
+  <p>17 Players. One Badge. One Mission.</p>
+</section>
+
+<section id="fixtures" class="fixtures">
+  <p class="eyebrow">02 / MATCH CENTRE</p>
+  <h2>FIXTURES <span>& RESULTS</span></h2>
+  <div class="match-card">
     <strong>LYOPHILLIZERS 11</strong>
     <span>VS</span>
     <strong>OPPONENT TBA</strong>
-    <small>Coming Soon</small>
+    <p>🏏 FIXTURE TO BE ANNOUNCED</p>
   </div>
 </section>
 
 <footer>
-  🏏 LYOPHILLIZERS 11 — One Team. One Dream. © 2026
+  <a class="logo" href="#home">🏏 LYOPHILLIZERS <span>11</span></a>
+  <p>FEAR NONE. CONQUER ALL. RULE THE GAME.</p>
+  <small>© 2026 LYOPHILLIZERS 11</small>
 </footer>
 
 </body>
 </html>
-```
