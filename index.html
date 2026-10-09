@@ -6,6 +6,74 @@
   <meta name="theme-color" content="#06130e">
   <title>Lyophillizers 11 | Impact Players</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Wide, image-first homepage hero: show more of the team poster */
+    .hero {
+      position: relative !important;
+      isolation: isolate;
+      overflow: hidden;
+      min-height: 0 !important;
+      height: clamp(560px, 56.25vw, 980px);
+      padding: clamp(28px, 4vw, 64px) 8% 76px !important;
+      grid-template-columns: minmax(0, 1fr) minmax(180px, .32fr) !important;
+      gap: clamp(16px, 3vw, 42px) !important;
+      background: #020913 url("./epic_cinematic_sports_team_poster_wide_panoramic.png") center center / cover no-repeat !important;
+      align-items: center;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(90deg, rgba(1,8,18,.82) 0%, rgba(1,8,18,.52) 25%, rgba(1,8,18,.08) 62%, rgba(1,8,18,.12) 100%);
+      pointer-events: none;
+    }
+    .hero-glow { display: none !important; }
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 760px !important;
+      padding: 0 !important;
+      text-shadow: 0 2px 12px rgba(0,0,0,.72);
+    }
+    .hero h1 {
+      max-width: 760px !important;
+      font-size: clamp(48px, 6.5vw, 100px) !important;
+      line-height: .9 !important;
+      overflow-wrap: normal !important;
+      word-break: normal !important;
+      hyphens: none !important;
+    }
+    .hero h1 span { display: inline-block !important; }
+    .hero-emblem { position: relative; z-index: 2; }
+    .hero-strip { position: absolute; z-index: 3; }
+    @media (max-width: 700px) {
+      .hero {
+        height: auto;
+        min-height: 720px !important;
+        padding: 44px 22px 76px !important;
+        grid-template-columns: 1fr !important;
+        background-position: center center !important;
+      }
+      .hero::before { background: linear-gradient(180deg, rgba(1,8,18,.74), rgba(1,8,18,.35) 48%, rgba(1,8,18,.8)); }
+      .hero-copy { max-width: 100% !important; }
+      .hero h1 { font-size: clamp(48px, 12vw, 76px) !important; }
+      .hero-emblem { display: none !important; }
+      .hero-stats { flex-wrap: wrap; }
+    }
+
+    .team-rules { padding-top: clamp(48px, 7vw, 88px); padding-bottom: clamp(48px, 7vw, 88px); }
+    .team-rules h2 { margin: 8px 0 12px; font-family: "Barlow Condensed", sans-serif; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1; color: #f7fff9; }
+    .team-rules h2 span { color: var(--lime, #b5ff24); }
+    .rules-intro { color: #c2d2c9; max-width: 760px; margin-bottom: 28px; }
+    .rules-list { list-style: none; counter-reset: rules; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .rules-list li { counter-increment: rules; display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; border: 1px solid rgba(181,255,36,.18); border-radius: 12px; background: rgba(255,255,255,.035); }
+    .rules-list li::before { content: "0" counter(rules); color: var(--lime, #b5ff24); font-size: .78rem; font-weight: 800; letter-spacing: .14em; }
+    .rules-list li strong { color: #f7fff9; }
+    .rules-list li span { color: #b9c8c0; line-height: 1.55; font-size: .95rem; }
+    @media (max-width: 700px) { .rules-list { grid-template-columns: 1fr; } }
+  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,7 +82,7 @@
 <header class="site-header">
   <a class="logo" href="#home" aria-label="Lyophillizers 11 home"><span class="logo-ball">🏏</span> LYOPHILLIZERS <b>11</b></a>
   <nav aria-label="Main navigation">
-    <a href="#home">Home</a><a href="#squad">Impact Players</a><a href="#fixtures">Fixtures</a>
+    <a href="#home">Home</a><a href="#squad">Impact Players</a><a href="#fixtures">Fixtures</a><a href="#rules">Team Rules</a><a href="#contact">Contact Us</a>
   </nav>
 </header>
 
@@ -134,6 +202,25 @@
     <p>17 Players. One Badge. One Mission.</p>
   </section>
 
+
+  <section id="rules" class="team-rules section-wrap" aria-labelledby="rules-title">
+    <p class="eyebrow">03 / FAIR PLAY &amp; OPPORTUNITY</p>
+    <h2 id="rules-title">TEAM RULES <span>&amp; OPPORTUNITIES</span></h2>
+    <p class="rules-intro">One team, equal respect, and opportunities built around interest and willingness to participate.</p>
+    <ol class="rules-list">
+      <li><strong>Fair Play</strong><span>Play with honesty, sportsmanship, and respect.</span></li>
+      <li><strong>Interest-Based Participation</strong><span>Playing opportunities are based on each player's interest, willingness, and availability.</span></li>
+      <li><strong>Equal Opportunities</strong><span>Every interested player gets a fair chance to participate and contribute.</span></li>
+      <li><strong>Rational Decisions</strong><span>Make reasonable decisions while considering everyone's interests.</span></li>
+      <li><strong>Transparency</strong><span>Communicate match participation, batting order, bowling opportunities, and responsibilities openly.</span></li>
+      <li><strong>No Favoritism</strong><span>Treat everyone fairly, without personal bias or special preferences.</span></li>
+      <li><strong>Commitment &amp; Discipline</strong><span>Share availability in advance and respect team decisions.</span></li>
+      <li><strong>Mutual Respect</strong><span>Respect teammates, their opinions, and individual interests.</span></li>
+      <li><strong>Voluntary Participation</strong><span>No one should feel forced to play; participation should be willing and genuine.</span></li>
+      <li><strong>Team Unity</strong><span>Promote friendship, enjoyment, fairness, and cooperation.</span></li>
+    </ol>
+  </section>
+
   <section id="fixtures" class="fixtures section-wrap">
     <p class="eyebrow">02 / MATCH CENTRE</p>
     <h2>FIXTURES <span>&amp; RESULTS</span></h2>
@@ -143,6 +230,21 @@
     </div>
   </section>
 </main>
+
+
+  <section id="contact" class="contact-section section-wrap" aria-labelledby="contact-title">
+    <div class="contact-heading">
+      <p class="eyebrow">04 / GET IN TOUCH</p>
+      <h2 id="contact-title">CONTACT <span>US</span></h2>
+    </div>
+    <div class="contact-strip">
+      <strong class="contact-name">👨‍⚕️ Rohit Saini, PhD</strong>
+      <span>🏛️ Department of Pharmaceutics</span>
+      <span>📱 <strong>Phone:</strong> <a href="tel:+917404324541">7404324541</a></span>
+      <strong class="whatsapp-note">🟢 WhatsApp Call Only</strong>
+      <a class="primary-button contact-button" href="https://wa.me/917404324541" target="_blank" rel="noopener noreferrer" aria-label="Open WhatsApp for Rohit Saini">CONTACT ON WHATSAPP ↗</a>
+    </div>
+  </section>
 
 <footer class="site-footer">
   <a class="logo" href="#home">🏏 LYOPHILLIZERS <b>11</b></a>
